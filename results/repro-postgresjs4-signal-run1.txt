@@ -1,0 +1,14 @@
+﻿postgres.js 4.0.0, pool max 1, abort 200 ms in, first query sleeps 1500 ms
+
+A: sent behind the running query, fast second query
+  second query: resolved after 1668 ms, first query: finished
+
+B: sent behind the running query, slow second query
+  second query: rejected 57014 after 1532 ms, first query: finished
+
+C: queued in the pool (max_pipeline: 1), fast second query
+  second query: rejected 57014 after 223 ms, first query: finished
+
+D: queued in the pool (max_pipeline: 1), slow second query
+  second query: rejected 57014 after 220 ms, first query: finished
+

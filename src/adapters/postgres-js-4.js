@@ -4,7 +4,7 @@ import { config } from "../config.js";
 // postgres.js 4.x, installed next to 3.x under the alias `postgres4`:
 //   npm install postgres4@npm:postgres@4.0.0
 // The v4.0.0 release notes add `.signal(abortSignal)` on a query: aborting
-// rejects it if it is still waiting, or cancels it if it is running.
+// rejects it if it is still waiting, or cancels it if it is running. An abort does not reject a query already sent behind a running one: see src/repro-postgresjs4-signal.js.
 // `query.cancel()` is kept as the workaround scenario so both routes are measured.
 export default {
   name: "postgres.js 4",

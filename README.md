@@ -63,6 +63,7 @@ To look at the postgres.js behaviour on its own, without the harness:
 ```bash
 node src/repro-postgresjs-cancel.js            # postgres.js 3.4.9
 node src/repro-postgresjs-cancel.js postgres4  # postgres.js 4.0.0
+node src/repro-postgresjs4-signal.js           # postgres.js 4.0.0: when does an aborted .signal() reject?
 ```
 
 A lock wait is used instead of a sleep because it is what a stuck transaction looks like in production, and because it shows whether a cancel also works on a query that is blocked and not running.
@@ -101,6 +102,7 @@ I searched each installed package for `signal` and `abort` (case-insensitive, in
 - **The mariadb connector is tested against MySQL.** The server in the test is MySQL 8.4.13, not MariaDB Server.
 - **Some numbers are client-side timers.** Verdicts, "DB idle after abort" and connection-seconds come from the database. How long a healthy query waited, and whether a promise settled, are measured by the harness.
 - **postgres.js 3.4.9.** In every recorded starvation run, 4 of the 12 cancelled promises never settled. How much that delayed healthy queries varied between runs, so read the unsettled count as the stable result.
+- **postgres.js 4.0.0 `.signal()` and pipelining.** With a pool of one connection, `.signal()` rejected a query that was waiting in the pool queue (`max_pipeline: 1`) after about 0.2 s. A query already sent behind a running one was not rejected at the abort: a slow one was rejected with `57014` only after about 1.5 s, when the query ahead finished, and a fast one resolved normally. See `results/repro-postgresjs4-signal-run1.txt`.
 - **Timing granularity.** In the single-query test the observer polls every 50 ms, so the "DB idle after abort" column is accurate to about that much plus one round trip. In the starvation test it is sampled every 100 ms, so connection-seconds are approximate.
 
 ## Add a driver
