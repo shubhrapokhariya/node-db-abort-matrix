@@ -109,4 +109,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). An adapter is one file of about 50 lines
 
 ## License
 
-MIT
+[MIT](LICENSE)
