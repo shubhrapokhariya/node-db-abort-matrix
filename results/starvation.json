@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-31T08:25:37.342Z",
+    "node": "v22.22.2",
+    "servers": {
+      "postgres": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2)",
+      "mysql": "MySQL 8.4.13"
+    },
+    "settings": {
+      "poolSize": 4,
+      "abandoned": 12,
+      "abortAfterMs": 200,
+      "holdMs": 6000,
+      "probeStartMs": 300,
+      "probeEveryMs": 100,
+      "sampleMs": 100,
+      "slowMs": 500,
+      "tailMs": 500,
+      "capMs": 20000
+    }
+  },
+  "results": [
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5731.5117,
+        "maxMs": 5731.5117,
+        "slowCount": 49
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.717156999999997,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "8.23.1"
+    },
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "signal",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5742.8523000000005,
+        "maxMs": 5742.8523000000005,
+        "slowCount": 49
+      },
+      "peakActive": 4,
+      "connectionSeconds": 24.050058399999994,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "8.23.1"
+    },
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "cancel-aware",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 1.6229999999995925,
+        "maxMs": 8.181499999998778,
+        "slowCount": 0
+      },
+      "peakActive": 4,
+      "connectionSeconds": 0.4701692000000039,
+      "rejected": 4,
+      "resolved": 8,
+      "unsettled": 0,
+      "errorCodes": [
+        "57014"
+      ],
+      "leaked": false,
+      "version": "8.23.1"
+    },
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5746.903599999998,
+        "maxMs": 5746.903599999998,
+        "slowCount": 49
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.734714800000003,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.4.9"
+    },
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "cancel-aware",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5706.235299999997,
+        "maxMs": 5706.235299999997,
+        "slowCount": 3
+      },
+      "peakActive": 4,
+      "connectionSeconds": 18.258348299999994,
+      "rejected": 8,
+      "resolved": 0,
+      "unsettled": 4,
+      "errorCodes": [
+        "57014"
+      ],
+      "leaked": false,
+      "version": "3.4.9"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 5714.285299999996,
+        "maxMs": 5714.285299999996,
+        "slowCount": 48
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.562667600000022,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "4.0.0"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "signal",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 3.272799999998824,
+        "maxMs": 6.05089999998745,
+        "slowCount": 0
+      },
+      "peakActive": 4,
+      "connectionSeconds": 1.384866000000009,
+      "rejected": 12,
+      "resolved": 0,
+      "unsettled": 0,
+      "errorCodes": [
+        "57014"
+      ],
+      "leaked": false,
+      "version": "4.0.0"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "cancel-aware",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 1.9254999999975553,
+        "maxMs": 6.3849000000045635,
+        "slowCount": 0
+      },
+      "peakActive": 4,
+      "connectionSeconds": 1.3196192000000155,
+      "rejected": 12,
+      "resolved": 0,
+      "unsettled": 0,
+      "errorCodes": [
+        "57014"
+      ],
+      "leaked": false,
+      "version": "4.0.0"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5702.239300000001,
+        "maxMs": 5702.239300000001,
+        "slowCount": 49
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.59773839999997,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "signal",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 58,
+        "failed": 0,
+        "firstMs": 5707.354900000006,
+        "maxMs": 5707.354900000006,
+        "slowCount": 49
+      },
+      "peakActive": 4,
+      "connectionSeconds": 24.05474040000002,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "cancel-aware",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 4.9046999999991385,
+        "maxMs": 6.525099999998929,
+        "slowCount": 0
+      },
+      "peakActive": 4,
+      "connectionSeconds": 0.6462038000000175,
+      "rejected": 4,
+      "resolved": 8,
+      "unsettled": 0,
+      "errorCodes": [
+        "ER_QUERY_INTERRUPTED"
+      ],
+      "leaked": false,
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 5716.216,
+        "maxMs": 5716.216,
+        "slowCount": 48
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.862712000000002,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.5.4"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "signal",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 56,
+        "failed": 0,
+        "firstMs": 5691.953300000008,
+        "maxMs": 5691.953300000008,
+        "slowCount": 47
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.536779999999965,
+      "rejected": 0,
+      "resolved": 12,
+      "unsettled": 0,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.5.4"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "cancel-aware",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 2.0869999999995343,
+        "maxMs": 6.122099999993225,
+        "slowCount": 0
+      },
+      "peakActive": 4,
+      "connectionSeconds": 0.4058183999999892,
+      "rejected": 4,
+      "resolved": 8,
+      "unsettled": 0,
+      "errorCodes": [
+        "ER_QUERY_INTERRUPTED"
+      ],
+      "leaked": false,
+      "version": "3.5.4"
+    }
+  ],
+  "skipped": []
+}

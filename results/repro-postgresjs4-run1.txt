@@ -1,0 +1,25 @@
+﻿
+B: cold pool, 12 queries  (postgres.js 4.0.0, pool max 4, lock held 3000 ms, cancel at 200 ms)
+  before cancel: 4 running, 8 sent, waiting behind another query
+  outcome:       12 rejected 57014
+  never settled within 10 s: 0 of 12
+
+C: warm pool, 12 queries  (postgres.js 4.0.0, pool max 4, lock held 3000 ms, cancel at 200 ms)
+  before cancel: 4 running, 8 sent, waiting behind another query
+  outcome:       12 rejected 57014
+  never settled within 10 s: 0 of 12
+
+E: warm pool, 8 queries  (postgres.js 4.0.0, pool max 4, lock held 3000 ms, cancel at 200 ms)
+  before cancel: 4 running, 4 sent, waiting behind another query
+  outcome:       8 rejected 57014
+  never settled within 10 s: 0 of 8
+
+F: warm pool, 12 queries, max_pipeline: 1  (postgres.js 4.0.0, pool max 4, lock held 3000 ms, cancel at 200 ms)
+  before cancel: 4 running, 8 queued inside the pool
+  outcome:       12 rejected 57014
+  never settled within 10 s: 0 of 12
+
+G: warm pool, 12 requests, one reserved connection each  (postgres.js 4.0.0, pool max 4, lock held 3000 ms, cancel at 200 ms)
+  before cancel: 4 running, 8 waiting for a connection
+  outcome:       4 rejected 57014, 8 skipped (client already gone)
+  never settled within 10 s: 0 of 12

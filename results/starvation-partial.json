@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-27T05:41:00.687Z",
+    "node": "v22.22.2",
+    "servers": {
+      "postgres": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2)"
+    },
+    "settings": {
+      "poolSize": 4,
+      "abandoned": 12,
+      "abortAfterMs": 200,
+      "holdMs": 6000,
+      "probeStartMs": 300,
+      "probeEveryMs": 100,
+      "sampleMs": 100,
+      "slowMs": 500,
+      "tailMs": 500,
+      "capMs": 20000
+    }
+  },
+  "results": [
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "naive",
+      "valid": true,
+      "reason": null,
+      "probes": {
+        "total": 57,
+        "failed": 0,
+        "firstMs": 5732.5336,
+        "maxMs": 5732.5336,
+        "slowCount": 48
+      },
+      "peakActive": 4,
+      "connectionSeconds": 23.6635692,
+      "rejected": 0,
+      "resolved": 12,
+      "errorCodes": [],
+      "leaked": false,
+      "version": "3.4.9"
+    },
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "cancel-aware",
+      "valid": false,
+      "reason": "requests did not settle within 20 s after the lock was released (abandoned: 8 of 12 settled, healthy queries: 57 of 57 settled)",
+      "version": "3.4.9"
+    }
+  ],
+  "skipped": []
+}

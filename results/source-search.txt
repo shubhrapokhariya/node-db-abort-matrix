@@ -1,0 +1,48 @@
+﻿.\node_modules\pg\lib\native\client.js:124  // signal we are connected now
+.\node_modules\pg\lib\client.js:414  // this means the socket is dead - do a hard abort of all queries and emit
+.\node_modules\pg\lib\defaults.js:67  // Abort any statement that waits longer than the specified duration in milliseconds while attempting to acquire a lock.
+.\node_modules\mysql2\lib\constants\client.js:3  // trackers, that are signaled with an extra single-byte prefix on new
+.\node_modules\mysql2\lib\constants\errors.js:231  exports.ER_FILSORT_ABORT = 1028;
+.\node_modules\mysql2\lib\constants\errors.js:281  exports.ER_GOT_SIGNAL = 1078;
+.\node_modules\mysql2\lib\constants\errors.js:355  exports.ER_ABORTING_CONNECTION = 1152;
+.\node_modules\mysql2\lib\constants\errors.js:387  exports.ER_NEW_ABORTING_CONNECTION = 1184;
+.\node_modules\mysql2\lib\constants\errors.js:844  exports.ER_DUP_SIGNAL_SET = 1641;
+.\node_modules\mysql2\lib\constants\errors.js:845  exports.ER_SIGNAL_WARN = 1642;
+.\node_modules\mysql2\lib\constants\errors.js:846  exports.ER_SIGNAL_NOT_FOUND = 1643;
+.\node_modules\mysql2\lib\constants\errors.js:847  exports.ER_SIGNAL_EXCEPTION = 1644;
+.\node_modules\mysql2\lib\constants\errors.js:848  exports.ER_RESIGNAL_WITHOUT_ACTIVE_HANDLER = 1645;
+.\node_modules\mysql2\lib\constants\errors.js:849  exports.ER_SIGNAL_BAD_CONDITION_TYPE = 1646;
+.\node_modules\mysql2\lib\constants\errors.js:892  exports.ER_LOCK_ABORTED = 1689;
+.\node_modules\mysql2\lib\constants\errors.js:1255  exports.ER_AUDIT_API_ABORT = 3164;
+.\node_modules\mysql2\lib\constants\errors.js:2204  exports[1028] = 'ER_FILSORT_ABORT';
+.\node_modules\mysql2\lib\constants\errors.js:2254  exports[1078] = 'ER_GOT_SIGNAL';
+.\node_modules\mysql2\lib\constants\errors.js:2328  exports[1152] = 'ER_ABORTING_CONNECTION';
+.\node_modules\mysql2\lib\constants\errors.js:2360  exports[1184] = 'ER_NEW_ABORTING_CONNECTION';
+.\node_modules\mysql2\lib\constants\errors.js:2817  exports[1641] = 'ER_DUP_SIGNAL_SET';
+.\node_modules\mysql2\lib\constants\errors.js:2818  exports[1642] = 'ER_SIGNAL_WARN';
+.\node_modules\mysql2\lib\constants\errors.js:2819  exports[1643] = 'ER_SIGNAL_NOT_FOUND';
+.\node_modules\mysql2\lib\constants\errors.js:2820  exports[1644] = 'ER_SIGNAL_EXCEPTION';
+.\node_modules\mysql2\lib\constants\errors.js:2821  exports[1645] = 'ER_RESIGNAL_WITHOUT_ACTIVE_HANDLER';
+.\node_modules\mysql2\lib\constants\errors.js:2822  exports[1646] = 'ER_SIGNAL_BAD_CONDITION_TYPE';
+.\node_modules\mysql2\lib\constants\errors.js:2865  exports[1689] = 'ER_LOCK_ABORTED';
+.\node_modules\mysql2\lib\constants\errors.js:3230  exports[3164] = 'ER_AUDIT_API_ABORT';
+.\node_modules\mariadb\dist\callback.cjs:1  "use strict";var hn=Object.create;var yt=Object.defineProperty;var Nn=Object.getOwnPropertyDescriptor;var In=Object.getOwnPropertyNames;var Rn=Object.getPrototy ...
+.\node_modules\mariadb\dist\callback.cjs:37  (pool connections: active=${this.activeConnections()} idle=${this.idleConnections()} limit=${this.opts.connectionLimit})`}toString(){return`active=${this.active ...
+.\node_modules\mariadb\dist\promise.cjs:1  "use strict";var ln=Object.create;var yt=Object.defineProperty;var cn=Object.getOwnPropertyDescriptor;var hn=Object.getOwnPropertyNames;var Nn=Object.getPrototy ...
+.\node_modules\mariadb\dist\promise.cjs:37  (pool connections: active=${this.activeConnections()} idle=${this.idleConnections()} limit=${this.opts.connectionLimit})`}toString(){return`active=${this.active ...
+.\node_modules\mariadb\lib\const\error-code.js:77  codes[188] = 'HA_ERR_ABORTED_BY_USER';
+.\node_modules\mariadb\lib\const\error-code.js:120  codes[1028] = 'ER_FILSORT_ABORT';
+.\node_modules\mariadb\lib\const\error-code.js:170  codes[1078] = 'ER_GOT_SIGNAL';
+.\node_modules\mariadb\lib\const\error-code.js:244  codes[1152] = 'ER_ABORTING_CONNECTION';
+.\node_modules\mariadb\lib\const\error-code.js:276  codes[1184] = 'ER_NEW_ABORTING_CONNECTION';
+.\node_modules\mariadb\lib\const\error-code.js:733  codes[1641] = 'ER_DUP_SIGNAL_SET';
+.\node_modules\mariadb\lib\const\error-code.js:734  codes[1642] = 'ER_SIGNAL_WARN';
+.\node_modules\mariadb\lib\const\error-code.js:735  codes[1643] = 'ER_SIGNAL_NOT_FOUND';
+.\node_modules\mariadb\lib\const\error-code.js:736  codes[1644] = 'ER_SIGNAL_EXCEPTION';
+.\node_modules\mariadb\lib\const\error-code.js:737  codes[1645] = 'ER_RESIGNAL_WITHOUT_ACTIVE_HANDLER';
+.\node_modules\mariadb\lib\const\error-code.js:738  codes[1646] = 'ER_SIGNAL_BAD_CONDITION_TYPE';
+.\node_modules\mariadb\lib\const\error-code.js:781  codes[1689] = 'ER_LOCK_ABORTED';
+.\node_modules\mariadb\lib\const\error-code.js:1424  codes[4208] = 'ER_SIGNAL_SKIP_ROW_FROM_TRIGGER';
+.\node_modules\mariadb\lib\pool.js:838  'pool is ending, connection request aborted',
+.\node_modules\mariadb\types\share.d.cts:60  * format. MariaDB stores JSON as LONGTEXT and signals JSON via the
+.\node_modules\mariadb\types\share.d.ts:59  * format. MariaDB stores JSON as LONGTEXT and signals JSON via the

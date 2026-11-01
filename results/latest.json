@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-31T08:10:37.789Z",
+    "node": "v22.22.2",
+    "servers": {
+      "postgres": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2)",
+      "mysql": "MySQL 8.4.13"
+    },
+    "settings": {
+      "sleepMs": 3000,
+      "abortAfterMs": 500,
+      "stopThresholdMs": 1000,
+      "pollMs": 50
+    }
+  },
+  "results": [
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "baseline",
+      "label": "no cancellation (control)",
+      "tag": "714e88783d",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2496.7324,
+      "dbStoppedAfterMs": 2497.3417,
+      "followUp": {
+        "ok": true,
+        "ms": 2501.8688,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "8.23.1"
+    },
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "signal",
+      "label": "signal: query({ text, signal })",
+      "tag": "34a6b44499",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2490.881299999999,
+      "dbStoppedAfterMs": 2492.1447,
+      "followUp": {
+        "ok": true,
+        "ms": 2492.3947,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "8.23.1"
+    },
+    {
+      "driver": "pg",
+      "dialect": "postgres",
+      "mode": "workaround",
+      "label": "workaround: pg_cancel_backend() from a second connection",
+      "tag": "0befb1bca2",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "rejected",
+        "error": {
+          "name": "error",
+          "code": "57014",
+          "message": "canceling statement due to user request"
+        }
+      },
+      "settledAfterAbortMs": 5.3659999999999854,
+      "dbStoppedAfterMs": 5.555299999999988,
+      "followUp": {
+        "ok": true,
+        "ms": 7.33219999999983,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "8.23.1"
+    },
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "baseline",
+      "label": "no cancellation (control)",
+      "tag": "ecad7cf387",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2492.5265999999992,
+      "dbStoppedAfterMs": 2494.709499999999,
+      "followUp": {
+        "ok": true,
+        "ms": 2492.512199999999,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "3.4.9"
+    },
+    {
+      "driver": "postgres.js",
+      "dialect": "postgres",
+      "mode": "workaround",
+      "label": "workaround: query.cancel()",
+      "tag": "d0c14876d1",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "rejected",
+        "error": {
+          "name": "PostgresError",
+          "code": "57014",
+          "message": "canceling statement due to user request"
+        }
+      },
+      "settledAfterAbortMs": 16.429200000000492,
+      "dbStoppedAfterMs": 80.1913999999997,
+      "followUp": {
+        "ok": true,
+        "ms": 16.407499999999345,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "3.4.9"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "baseline",
+      "label": "no cancellation (control)",
+      "tag": "8c04f0227c",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2494.1805000000004,
+      "dbStoppedAfterMs": 2554.8572000000004,
+      "followUp": {
+        "ok": true,
+        "ms": 2494.1767999999993,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "4.0.0"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "signal",
+      "label": "signal: query.signal(signal)",
+      "tag": "8c195b1801",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "rejected",
+        "error": {
+          "name": "PostgresError",
+          "code": "57014",
+          "message": "canceling statement due to user request"
+        }
+      },
+      "settledAfterAbortMs": 20.707899999999427,
+      "dbStoppedAfterMs": 80.08730000000105,
+      "followUp": {
+        "ok": true,
+        "ms": 20.655799999998635,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "4.0.0"
+    },
+    {
+      "driver": "postgres.js 4",
+      "dialect": "postgres",
+      "mode": "workaround",
+      "label": "workaround: query.cancel()",
+      "tag": "a4c50cd972",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "rejected",
+        "error": {
+          "name": "PostgresError",
+          "code": "57014",
+          "message": "canceling statement due to user request"
+        }
+      },
+      "settledAfterAbortMs": 5.144200000002456,
+      "dbStoppedAfterMs": 64.63420000000042,
+      "followUp": {
+        "ok": true,
+        "ms": 5.1182000000007974,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "4.0.0"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "baseline",
+      "label": "no cancellation (control)",
+      "tag": "c1ce4087d7",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2432.036699999997,
+      "dbStoppedAfterMs": 2433.6875999999975,
+      "followUp": {
+        "ok": true,
+        "ms": 2437.388799999997,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "signal",
+      "label": "signal: query({ sql, signal })",
+      "tag": "46059965d8",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2490.3613000000005,
+      "dbStoppedAfterMs": 2498.9087,
+      "followUp": {
+        "ok": true,
+        "ms": 2495.9617,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mysql2",
+      "dialect": "mysql",
+      "mode": "workaround",
+      "label": "workaround: KILL QUERY from a second connection",
+      "tag": "d548fe5f1f",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 3.3673999999991793,
+      "dbStoppedAfterMs": 3.7114999999976135,
+      "followUp": {
+        "ok": true,
+        "ms": 5.3171000000002095,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "3.24.6"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "baseline",
+      "label": "no cancellation (control)",
+      "tag": "ce205b7bb3",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2426.7628000000004,
+      "dbStoppedAfterMs": 2488.8503999999994,
+      "followUp": {
+        "ok": true,
+        "ms": 2432.0123999999996,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "3.5.4"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "signal",
+      "label": "signal: query({ sql, signal, abortSignal })",
+      "tag": "054fe86444",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 2430.5097000000023,
+      "dbStoppedAfterMs": 2434.2441,
+      "followUp": {
+        "ok": true,
+        "ms": 2433.9616000000024,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "ignored",
+      "version": "3.5.4"
+    },
+    {
+      "driver": "mariadb",
+      "dialect": "mysql",
+      "mode": "workaround",
+      "label": "workaround: KILL QUERY from a second connection",
+      "tag": "7f0606559b",
+      "valid": true,
+      "reason": null,
+      "outcome": {
+        "status": "resolved",
+        "error": null
+      },
+      "settledAfterAbortMs": 3.1810000000004948,
+      "dbStoppedAfterMs": 65.47839999999997,
+      "followUp": {
+        "ok": true,
+        "ms": 4.936000000001513,
+        "error": null
+      },
+      "leaked": false,
+      "verdict": "cancelled",
+      "version": "3.5.4"
+    }
+  ],
+  "skipped": []
+}

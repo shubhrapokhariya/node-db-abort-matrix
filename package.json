@@ -1,0 +1,35 @@
+{
+  "name": "node-db-abort-matrix",
+  "version": "0.1.0",
+  "description": "Does aborting a request actually stop the query? A reproducible test of how Node.js database drivers handle AbortSignal.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "author": "Shubhra Dev",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "up": "docker compose up -d --wait",
+    "down": "docker compose down -v",
+    "start": "node src/run.js",
+    "test": "node --test test/harness.test.js test/starvation.test.js",
+    "starvation": "node src/run-starvation.js"
+  },
+  "dependencies": {
+    "mariadb": "^3.4.0",
+    "mysql2": "^3.11.0",
+    "pg": "^8.13.0",
+    "postgres": "^3.4.4",
+    "postgres4": "npm:postgres@^4.0.0"
+  },
+  "keywords": [
+    "nodejs",
+    "abortsignal",
+    "abortcontroller",
+    "postgres",
+    "mysql",
+    "query-cancellation",
+    "database-drivers"
+  ]
+}

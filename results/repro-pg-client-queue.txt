@@ -1,0 +1,2 @@
+﻿pg 8.23.1: 4 queries queued on one Client
+  DeprecationWarning: Calling client.query() when the client is already executing a query is deprecated and will be removed in pg@9.0. Use async/await or an external async flow control mechanism instead.
